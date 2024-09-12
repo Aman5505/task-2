@@ -1,0 +1,166 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('download.jpeg');
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#start-game {
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#start-game:hover {
+    background-color: #444;
+}
+
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 30%;
+    border-right: 2px solid #444;
+    padding: 10px;
+}
+
+#prize-list {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+#prize-list li {
+    padding: 5px 10px;
+    border: 1px solid #444;
+    margin: 5px 0;
+    transition: background 0.3s;
+}
+
+#prize-list li.active {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+#quiz-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(51, 51, 51, 0.8);
+    width: 70%;
+    border-radius: 10px;
+    position: relative;
+}
+
+#kbc-logo {
+    width: 100px;
+    padding: 20px 200px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    opacity: 80%;
+}
+
+#question-area {
+    margin-bottom: 20px;
+}
+
+#options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.option {
+    padding: 15px;
+    background: #444;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.option:hover {
+    background: #742121;
+}
+
+.correct {
+    background: green;
+    animation: correctAnimation 1s forwards;
+}
+
+.wrong {
+    background: red;
+    animation: wrongAnimation 1s forwards;
+}
+
+@keyframes correctAnimation {
+    0% {
+        background: green;
+        background: #444;
+    }
+
+    100% {
+        background: #444;
+    }
+}
+
+@keyframes wrongAnimation {
+    0% {
+        background: red;
+    }
+
+    100% {
+        background: #444;
+    }
+}
+
+#score-area {
+    margin-top: 20px;
+}
+
+#timer {
+    color: yellow;
+    font-weight: bold;
+}
+
+#lifelines {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#lifelines button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #555;
+    color: white;
+    transition: background 0.3s;
+}
+
+#lifelines button:hover {
+    background: #666;
+}
+
+#lifelines button:disabled {
+    background: #888;
+    cursor: not-allowed;
+}

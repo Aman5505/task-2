@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBC Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="start-game">Start Game</button>
+    <div id="game-container">
+      <div id="sidebar">
+        <ul id="prize-list">
+          <li>₹1,00,00,000</li>
+          <li>₹50,00,000</li>
+          <li>₹25,00,000</li>
+          <li>₹12,50,000</li>
+          <li>₹6,40,000</li>
+          <li>₹3,20,000</li>
+          <li>₹1,60,000</li>
+          <li>₹80,000</li>
+          <li>₹40,000</li>
+          <li>₹20,000</li>
+          <li>₹10,000</li>
+          <li>₹5,000</li>
+          <li>₹3,000</li>
+          <li>₹2,000</li>
+          <li>₹1,000</li>
+        </ul>
+      </div>
+      <div id="quiz-container">
+        <img id="kbc-logo" src="images.jpeg" alt="KBC Logo" />
+        <h1>KBC Quiz Game</h1>
+        <div id="question-area">
+          <p id="question">Loading question...</p>
+          <div id="options">
+            <button class="option">Option A</button>
+            <button class="option">Option B</button>
+            <button class="option">Option C</button>
+            <button class="option">Option D</button>
+          </div>
+        </div>
+        <div id="score-area">
+          <p>Time Remaining: <span id="timer">30</span> seconds</p>
+          <div id="lifelines">
+            <button id="lifeline-5050" onclick="use5050()">50:50</button>
+            <button id="lifeline-audience" onclick="useAudiencePoll()">
+              Audience Poll
+            </button>
+            <button id="lifeline-phone" onclick="usePhoneAFriend()">
+              Phone a Friend
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="option-sound" src="option.mp3"></audio>
+    <audio id="background-audio" src="kbc0.mp3" autoplay></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
